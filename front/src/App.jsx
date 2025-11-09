@@ -1,58 +1,90 @@
 import React, { useState } from 'react';
 
+const Nav = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  return <nav className="container mx-auto px-4 sm:px-6 lg:px-8 ">
+    <div className="flex items-center justify-center h-16">
+      {/* Mobile menu button */}
+      <button 
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        className="lg:hidden text-white p-2"
+        aria-label="Toggle navigation"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      {/* Desktop menu */}
+      <ul className="hidden lg:flex space-x-8">
+        <li><a href="#accueil" className="text-white text-sm font-medium hover:text-gray-300 transition">Accueil</a></li>
+        <li><a href="#apropos" className="text-white text-sm font-medium hover:text-gray-300 transition">À Propos</a></li>
+        <li><a href="#evenements" className="text-white text-sm font-medium hover:text-gray-300 transition">Événements</a></li>
+        <li><a href="#galerie" className="text-white text-sm font-medium hover:text-gray-300 transition">Galerie</a></li>
+        <li><a href="#contact" className="text-white text-sm font-medium hover:text-gray-300 transition">Contact</a></li>
+      </ul>
+
+    {/* Mobile menu */}
+    {isMenuOpen && (
+      <ul className="lg:hidden pb-4 space-y-2">
+        <li><a href="#accueil" className="block text-white hover:text-gray-300 py-2">Accueil</a></li>
+        <li><a href="#apropos" className="block text-white hover:text-gray-300 py-2">À Propos</a></li>
+        <li><a href="#evenements" className="block text-white hover:text-gray-300 py-2">Événements</a></li>
+        <li><a href="#galerie" className="block text-white hover:text-gray-300 py-2">Galerie</a></li>
+        <li><a href="#contact" className="block text-white hover:text-gray-300 py-2">Contact</a></li>
+      </ul>
+    )}
+    </div>
+  </nav>
+}
+
+const Banner = () => {
+  return <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto mt-16">
+    <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-4 tracking-tighter">EGLISE JEUNES PRODIGES</h1>
+    <div className="border-t border-b border-white/30 py-4 mb-8">
+      <p className="text-xl md:text-2xl text-white font-medium tracking-wide">POUR LES JEUNES, PAR LES JEUNES</p>
+    </div>
+    <div className="flex flex-col gap-4 justify-center items-center mb-16">
+      <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-8 py-3 text-lg font-medium transition-all duration-300 min-w-[280px]">Rejoins nous cette semaine</button>
+      <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-8 py-3 text-lg font-medium transition-all duration-300 min-w-[280px] focus:active:">Regarder nos cultes en ligne</button>
+    </div>
+    <div className="absolute -bottom-1/12 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="flex flex-col items-center text-white">
+        <span className="text-sm  mb-2">Défiler vers le bas</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+      </div>
+    </div>
+  </div>
+}
+
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className="font-['Inter','Segoe_UI',sans-serif]">
+      <section className="min-h-screen">
+        <header className="fixed top-0 right-0 left-0 z-50 bg-black/90 backdrop-blur-sm">
+          <Nav />
+        </header>
+        <main>
+          <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
+            <div className="absolute banner inset-0 bg-cover bg-center">
+              <div className="absolute inset-0 bg-black/70"></div>
+            </div>
+            <div className="absolute top-22 left-1/2 transform -translate-x-1/2 z-20"> 
+              <div className="flex items-center justify-center">
+                <img src="/src/assets/logo.jpeg" className='w-20 h-20 rounded-full' alt="logo" />
+              </div>
+            </div>
+            <Banner />
+          </section>
+        </main>
+      </section>
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-gray-900 z-50">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center py-4">
-            <a href="#accueil" className="font-bold">
-              <img 
-                src="/src/assets/ejp_logo.jpg" 
-                alt="EPJ Logo" 
-                className="h-20 w-20"
-              />
-            </a>
-            
-            {/* Mobile menu button */}
-            <button 
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden text-white p-2"
-              aria-label="Toggle navigation"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-
-            {/* Desktop menu */}
-            <ul className="hidden lg:flex space-x-8">
-              <li><a href="#accueil" className="text-white hover:text-gray-300 transition">Accueil</a></li>
-              <li><a href="#apropos" className="text-white hover:text-gray-300 transition">À Propos</a></li>
-              <li><a href="#evenements" className="text-white hover:text-gray-300 transition">Événements</a></li>
-              <li><a href="#galerie" className="text-white hover:text-gray-300 transition">Galerie</a></li>
-              <li><a href="#contact" className="text-white hover:text-gray-300 transition">Contact</a></li>
-            </ul>
-          </div>
-
-          {/* Mobile menu */}
-          {isMenuOpen && (
-            <ul className="lg:hidden pb-4 space-y-2">
-              <li><a href="#accueil" className="block text-white hover:text-gray-300 py-2">Accueil</a></li>
-              <li><a href="#apropos" className="block text-white hover:text-gray-300 py-2">À Propos</a></li>
-              <li><a href="#evenements" className="block text-white hover:text-gray-300 py-2">Événements</a></li>
-              <li><a href="#galerie" className="block text-white hover:text-gray-300 py-2">Galerie</a></li>
-              <li><a href="#contact" className="block text-white hover:text-gray-300 py-2">Contact</a></li>
-            </ul>
-          )}
-        </div>
-      </nav>
+      
 
       {/* Hero Section */}
-      <section id="accueil" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-blue-900 to-gray-900 mt-28">
+      {/* <section id="accueil" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-blue-900 to-gray-900 mt-28">
         <div className="container mx-auto px-4 text-center text-white">
           <div className="mb-12 space-y-4">
             <a href="#servir" className="inline-block text-white hover:text-gray-300 transition">
@@ -81,7 +113,7 @@ function App() {
             <div className="text-3xl">↓</div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* About Section */}
       <section id="apropos" className="py-20 bg-gray-800 text-white">
