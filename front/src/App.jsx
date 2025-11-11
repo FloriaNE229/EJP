@@ -404,7 +404,7 @@ function App() {
                 <div className="relative z-10 p-6 h-full flex flex-col justify-center text-white">
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold mb-3 bg-white bg-opacity-20 inline-block px-5 py-1 rounded-full">
-                      LUC 14:23
+                      LUC 14V23
                     </h3>
                     <div className="w-20 h-1 bg-yellow-400 mx-auto mt-3"></div>
                   </div>
