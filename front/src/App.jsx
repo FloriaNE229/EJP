@@ -401,7 +401,7 @@ function App() {
                   style={{backgroundImage: 'url("https://images.unsplash.com/photo-1544830291-4a3940477c7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80")'}}>
                 <div className="absolute inset-0 bg-black bg-opacity-40"></div>
                 
-                <div className="relative z-10 p-6 h-full flex flex-col justify-center text-white">
+                <div className="relative z-10 p-6 h-full flex flex-col justify-center text-black">
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold mb-3 bg-white bg-opacity-20 inline-block px-5 py-1 rounded-full">
                       LUC 14V23
