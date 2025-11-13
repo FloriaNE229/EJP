@@ -130,28 +130,28 @@ const CountdownSection = () => {
                 </div>
 
                 <div className="flex gap-3 md:gap-4 justify-center">
-                    <div className="bg-white/60 backdrop-blur-md border border-gray-300/30 rounded-xl p-4 md:p-5 min-w-[80px] md:min-w-[90px] shadow-xl">
+                    <div className="bg-white/60 backdrop-blur-md border border-gray-300/30 rounded-xl p-4 md:p-5 min-w-20 md:min-w-[90px] shadow-xl">
                         <div className="text-2xl md:text-3xl font-bold text-gray-800 mb-1">
                             {formatNumber(timeLeft.days)}
                         </div>
                         <div className="text-xs text-gray-600 uppercase tracking-wider">Jours</div>
                     </div>
 
-                    <div className="bg-white/60 backdrop-blur-md border border-gray-300/30 rounded-xl p-4 md:p-5 min-w-[80px] md:min-w-[90px] shadow-xl">
+                    <div className="bg-white/60 backdrop-blur-md border border-gray-300/30 rounded-xl p-4 md:p-5 min-w-20 md:min-w-[90px] shadow-xl">
                         <div className="text-2xl md:text-3xl font-bold text-gray-800 mb-1">
                             {formatNumber(timeLeft.hours)}
                         </div>
                         <div className="text-xs text-gray-600 uppercase tracking-wider">Heures</div>
                     </div>
 
-                    <div className="bg-white/60 backdrop-blur-md border border-gray-300/30 rounded-xl p-4 md:p-5 min-w-[80px] md:min-w-[90px] shadow-xl">
+                    <div className="bg-white/60 backdrop-blur-md border border-gray-300/30 rounded-xl p-4 md:p-5 min-w-20 md:min-w-[90px] shadow-xl">
                         <div className="text-2xl md:text-3xl font-bold text-gray-800 mb-1">
                             {formatNumber(timeLeft.minutes)}
                         </div>
                         <div className="text-xs text-gray-600 uppercase tracking-wider">Minutes</div>
                     </div>
 
-                    <div className="bg-white/60 backdrop-blur-md border border-gray-300/30 rounded-xl p-4 md:p-5 min-w-[80px] md:min-w-[90px] shadow-xl">
+                    <div className="bg-white/60 backdrop-blur-md border border-gray-300/30 rounded-xl p-4 md:p-5 min-w-20 md:min-w-[90px] shadow-xl">
                         <div className="text-2xl md:text-3xl font-bold text-gray-800 mb-1">
                             {formatNumber(timeLeft.seconds)}
                         </div>
@@ -506,3 +506,4 @@ const Index = () =>{
 }
 
 export default Index;
+export {Nav};
