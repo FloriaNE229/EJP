@@ -1,4 +1,5 @@
 import { Nav } from "./Index";
+import { Contact } from "./Index";
 
 const Banner = ()=>{
     return (
@@ -15,11 +16,58 @@ const Banner = ()=>{
     )
 }
 
+const Aboutfij = ()=>{
+  return (
+    <div className="container mx-auto px-4">
+      <div className="flex items-center justify-center ">
+        <div className="p-8 rounded-lg shadow-md">
+          <h2 className="text-6xl font-bold mb-4 text-center">C'est quoi une FIJ ?</h2>
+            <p className=" flex flex-col px-30 text-xl mx-auto text-center">
+              Les FIJ sont les cellules de l'Eglise des Jeunes d'Impact Centre Chrétien.Les membres de l'église se réunissent tous les mardis de 19h15 à 20h30 dans les 
+              maison hôtes pour s'édifier et influencer leurs villes et leurs quartiers avec les valeurs de Christ ! (Actes 5:42)
+            </p>
+        </div>
+      </div>
+      <div className=" grid grid-cols-1 sm:grid-cols-2  p-4 py-12">
+        <div className=" maincontainer w-full h-80">
+          <div className="w-full h-full thecard">
+            {/* face avant */}
+            <div className="thefront absolute w-full h-full bg-amber-200 rounded-lg overflow-hidden">
+              <div className="w-full bg-center bg-no-repeat shrink-0 bg-cover rounded-t-lg"
+                style={{
+                  backgroundImage: 'url("./assets/FB_IMG_1757701105299.jpg")',
+                  height: '200px'
+                }}>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p>
+            Notre Mission
+          </p>
+        </div>
+        <div className="w-full h-80">
+          <h3>Vision</h3>
+        </div>
+        <div>
+          <p>Notre vision</p>
+        </div>
+      </div>
+      
+    </div>
+  )
+}
+
 const Fijgird = () => {
   const fijData=[
     {nom:"Fij Djassin", description:"Create a welcoming atmosphere for every guest", mapURL:"//www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.2374295874697!2d2.6072094!3d6.491592000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b50af82c2a631%3A0xbf1590d6b3c47000!2sBd%20Tokpota%2C%20Porto-Novo!5e0!3m2!1sen!2sbj!4v1763058642929!5m2!1sen!2sbj"},
-    {nom:"Fij Djassin", description:"Create a welcoming atmosphere for every guest", mapURL:"//www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.2374295874697!2d2.6072094!3d6.491592000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b50af82c2a631%3A0xbf1590d6b3c47000!2sBd%20Tokpota%2C%20Porto-Novo!5e0!3m2!1sen!2sbj!4v1763058642929!5m2!1sen!2sbj"},
-    {nom:"Fij Djassin", description:"Create a welcoming atmosphere for every guest", mapURL:"//www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.2374295874697!2d2.6072094!3d6.491592000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b50af82c2a631%3A0xbf1590d6b3c47000!2sBd%20Tokpota%2C%20Porto-Novo!5e0!3m2!1sen!2sbj!4v1763058642929!5m2!1sen!2sbj"},
+    {nom:"Fij Tokpota", description:"Create a welcoming atmosphere for every guest", mapURL:"//www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.2374295874697!2d2.6072094!3d6.491592000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b50af82c2a631%3A0xbf1590d6b3c47000!2sBd%20Tokpota%2C%20Porto-Novo!5e0!3m2!1sen!2sbj!4v1763058642929!5m2!1sen!2sbj"},
+    {nom:"Fij Attakè", description:"Create a welcoming atmosphere for every guest", mapURL:"//www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.2374295874697!2d2.6072094!3d6.491592000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b50af82c2a631%3A0xbf1590d6b3c47000!2sBd%20Tokpota%2C%20Porto-Novo!5e0!3m2!1sen!2sbj!4v1763058642929!5m2!1sen!2sbj"},
+    {nom:"Fij Attakè", description:"Create a welcoming atmosphere for every guest", mapURL:"//www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.2374295874697!2d2.6072094!3d6.491592000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b50af82c2a631%3A0xbf1590d6b3c47000!2sBd%20Tokpota%2C%20Porto-Novo!5e0!3m2!1sen!2sbj!4v1763058642929!5m2!1sen!2sbj"},
+    {nom:"Fij Attakè", description:"Create a welcoming atmosphere for every guest", mapURL:"//www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.2374295874697!2d2.6072094!3d6.491592000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b50af82c2a631%3A0xbf1590d6b3c47000!2sBd%20Tokpota%2C%20Porto-Novo!5e0!3m2!1sen!2sbj!4v1763058642929!5m2!1sen!2sbj"},
+    {nom:"Fij Attakè", description:"Create a welcoming atmosphere for every guest", mapURL:"//www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.2374295874697!2d2.6072094!3d6.491592000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b50af82c2a631%3A0xbf1590d6b3c47000!2sBd%20Tokpota%2C%20Porto-Novo!5e0!3m2!1sen!2sbj!4v1763058642929!5m2!1sen!2sbj"},
 
   ]
     return (
@@ -77,9 +125,21 @@ const Fij = () =>{
                     </div>
                     <Banner />
                 </section>
+                <section id="about" className="py-12 bg-white">
+                  <Aboutfij />
+                </section>
                 {/* Les familles d'impact */}
                 <section className="py-12 px-4">
+                  <div className="flex items-center justify-center">
+                    <div>
+                      <h2 className="text-6xl  mb-4 text-center" >Rejoins une FIJ</h2>
+                      <p className="text-center">Rejoins la FIJ la plus proche de chez toi</p>
+                    </div>
+                  </div>
                     <Fijgird />
+                </section>
+                <section className="py-12 bg-white">
+                  <Contact />
                 </section>
             </div>
         </section>

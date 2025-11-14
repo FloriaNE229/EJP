@@ -24,7 +24,7 @@ const Nav = () => {
                         <li><a href="/evenements" className="nav-link">Événements</a></li>
                         <li><a href="#galerie" className="nav-link">Galerie</a></li>
                         <li><a href="#contact" className="nav-link">Contact</a></li>
-                        <li><a href="/Fij" className="nav-link">Je souhaite rejoindre une FIJ</a></li>
+                        <li><a href="/Fij" className="nav-link">Rejoindre une FIJ</a></li>
                     </ul>
 
                     {isMenuOpen && (
@@ -60,8 +60,8 @@ const Banner = () => {
                 <p className="text-lg md:text-xl text-white font-medium tracking-wide">POUR LES JEUNES, PAR LES JEUNES</p>
             </div>
             <div className="flex flex-col gap-3 justify-center items-center mb-12">
-                <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-6 py-2 text-base font-medium transition-all duration-300 min-w-[240px]">Rejoins nous cette semaine</button>
-                <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-6 py-2 text-base font-medium transition-all duration-300 min-w-[240px]">Regarder nos cultes en ligne</button>
+                <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-6 py-2 text-base font-medium transition-all duration-300 min-w-60">Rejoins nous cette semaine</button>
+                <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-6 py-2 text-base font-medium transition-all duration-300 min-w-60">Regarder nos cultes en ligne</button>
             </div>
             <div className="absolute -bottom-1/12 left-1/2 transform -translate-x-1/2 animate-bounce">
                 <div className="flex flex-col items-center text-white">
@@ -161,6 +161,95 @@ const CountdownSection = () => {
             </div>
         </section>
     );
+}
+
+const Contact = ()=>{
+    return (
+        <div>
+            <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-cover bg-center opacity-10 hidden md:block" 
+                style={{backgroundImage: 'url("https://images.unsplash.com/photo-1544830291-4a3940477c7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80")'}}>
+            </div>
+
+            <div className="container mx-auto px-4 max-w-6xl relative z-10">
+            <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+                UNE QUESTION ?
+            </h2>
+
+            <div className="grid md:grid-cols-2 gap-12">
+                <div className="space-y-6">
+                <div>
+                    <label className="block text-gray-700 font-semibold mb-2 text-base">
+                    NOM
+                    </label>
+                    <input 
+                    type="text" 
+                    className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 text-gray-800 placeholder-gray-400 transition duration-300"
+                    placeholder="Votre nom complet"
+                    />
+                </div>
+
+                <div>
+                    <label className="block text-gray-700 font-semibold mb-2 text-base">
+                    EMAIL
+                    </label>
+                    <input 
+                    type="email" 
+                    className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 text-gray-800 placeholder-gray-400 transition duration-300"
+                    placeholder="Votre adresse email"
+                    />
+                </div>
+
+                <div>
+                    <label className="block text-gray-700 font-semibold mb-2 text-base">
+                    ÉCRIVEZ VOTRE MESSAGE
+                    </label>
+                    <textarea 
+                    className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 text-gray-800 placeholder-gray-400 resize-none transition duration-300"
+                    rows="5"
+                    placeholder="Tapez votre message ici..."
+                    ></textarea>
+                </div>
+
+                <button className="w-full bg-gray-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105 shadow-md">
+                    ENVOYER VOTRE MESSAGE
+                </button>
+                </div>
+
+                <div className="relative">
+                <div className="bg-cover bg-center rounded-xl overflow-hidden shadow-lg h-full min-h-[400px]"
+                    style={{backgroundImage: 'url("https://images.unsplash.com/photo-1544830291-4a3940477c7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80")'}}>
+                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                    
+                    <div className="relative z-10 p-6 h-full flex flex-col justify-center text-black">
+                    <div className="text-center mb-6">
+                        <h3 className="text-2xl font-bold mb-3 bg-white bg-opacity-20 inline-block px-5 py-1 rounded-full">
+                        LUC 14V23
+                        </h3>
+                        <div className="w-20 h-1 bg-yellow-400 mx-auto mt-3"></div>
+                    </div>
+                    
+                    <p className="text-lg leading-relaxed text-center font-medium mb-6 text-white drop-shadow-lg">
+                        "ET LE MAÎTRE DIT AU SERVITEUR: VA DANS LES CHEMINS ET LE LONG DES HAIES, 
+                        ET CEUX QUE TU TROUVERAS, CONTRAINS-LES D'ENTRER, AFIN QUE MA MAISON SOIT REMPLIE."
+                    </p>
+
+                    <div className="mt-6 text-center">
+                        <div className="w-14 h-14 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3 backdrop-blur-sm">
+                        <svg className="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        </div>
+                        <p className="text-white font-semibold text-base">
+                        Église Jeunes Prodiges
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    )
 }
 
 
@@ -333,88 +422,7 @@ const Index = () =>{
         </section> */}
 
         <section id="contact" className="py-12 bg-white relative">
-            <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-cover bg-center opacity-10 hidden md:block" 
-                style={{backgroundImage: 'url("https://images.unsplash.com/photo-1544830291-4a3940477c7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80")'}}>
-            </div>
-
-            <div className="container mx-auto px-4 max-w-6xl relative z-10">
-            <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-                UNE QUESTION ?
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-12">
-                <div className="space-y-6">
-                <div>
-                    <label className="block text-gray-700 font-semibold mb-2 text-base">
-                    NOM
-                    </label>
-                    <input 
-                    type="text" 
-                    className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 text-gray-800 placeholder-gray-400 transition duration-300"
-                    placeholder="Votre nom complet"
-                    />
-                </div>
-
-                <div>
-                    <label className="block text-gray-700 font-semibold mb-2 text-base">
-                    EMAIL
-                    </label>
-                    <input 
-                    type="email" 
-                    className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 text-gray-800 placeholder-gray-400 transition duration-300"
-                    placeholder="Votre adresse email"
-                    />
-                </div>
-
-                <div>
-                    <label className="block text-gray-700 font-semibold mb-2 text-base">
-                    ÉCRIVEZ VOTRE MESSAGE
-                    </label>
-                    <textarea 
-                    className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 text-gray-800 placeholder-gray-400 resize-none transition duration-300"
-                    rows="5"
-                    placeholder="Tapez votre message ici..."
-                    ></textarea>
-                </div>
-
-                <button className="w-full bg-gray-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105 shadow-md">
-                    ENVOYER VOTRE MESSAGE
-                </button>
-                </div>
-
-                <div className="relative">
-                <div className="bg-cover bg-center rounded-xl overflow-hidden shadow-lg h-full min-h-[400px]"
-                    style={{backgroundImage: 'url("https://images.unsplash.com/photo-1544830291-4a3940477c7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80")'}}>
-                    <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-                    
-                    <div className="relative z-10 p-6 h-full flex flex-col justify-center text-black">
-                    <div className="text-center mb-6">
-                        <h3 className="text-2xl font-bold mb-3 bg-white bg-opacity-20 inline-block px-5 py-1 rounded-full">
-                        LUC 14V23
-                        </h3>
-                        <div className="w-20 h-1 bg-yellow-400 mx-auto mt-3"></div>
-                    </div>
-                    
-                    <p className="text-lg leading-relaxed text-center font-medium mb-6 text-white drop-shadow-lg">
-                        "ET LE MAÎTRE DIT AU SERVITEUR: VA DANS LES CHEMINS ET LE LONG DES HAIES, 
-                        ET CEUX QUE TU TROUVERAS, CONTRAINS-LES D'ENTRER, AFIN QUE MA MAISON SOIT REMPLIE."
-                    </p>
-
-                    <div className="mt-6 text-center">
-                        <div className="w-14 h-14 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3 backdrop-blur-sm">
-                        <svg className="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                        </svg>
-                        </div>
-                        <p className="text-white font-semibold text-base">
-                        Église Jeunes Prodiges
-                        </p>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-            </div>
+            <Contact />
         </section>
         
         <footer className="py-6 bg-linear-gradient-to-br from-gray-100 via-gray-200 to-gray-300 backdrop-blur-sm text-center relative overflow-hidden">
@@ -506,4 +514,4 @@ const Index = () =>{
 }
 
 export default Index;
-export {Nav};
+export {Nav,Contact};
