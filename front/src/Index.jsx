@@ -20,7 +20,7 @@ const Nav = () => {
 
                     <ul className="hidden lg:flex space-x-8">
                         <li><a href="/" className="nav-link">Accueil</a></li>
-                        <li><a href="#apropos" className="nav-link">À Propos</a></li>
+                        <li><a href="/apropos" className="nav-link">Qui sommes nous ?</a></li>
                         <li><a href="/evenements" className="nav-link">Événements</a></li>
                         <li><a href="#galerie" className="nav-link">Galerie</a></li>
                         <li><a href="#contact" className="nav-link">Contact</a></li>

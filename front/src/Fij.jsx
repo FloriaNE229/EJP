@@ -115,33 +115,33 @@ const Fijgird = () => {
 const Fij = () =>{
     return(
         <section className="background-dark">
-            <div className="min-h-screen">
-                <header className="fixed top-0 right-0 left-0 z-50">
-                    <Nav />
-                </header>
-                <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
-                    <div className="absolute banner-fij inset-0 bg-cover bg-center">
-                        <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
-                    </div>
-                    <Banner />
-                </section>
-                <section id="about" className="py-12 bg-white">
-                  <Aboutfij />
-                </section>
-                {/* Les familles d'impact */}
-                <section className="py-12 px-4">
-                  <div className="flex items-center justify-center">
-                    <div>
-                      <h2 className="text-6xl  mb-4 text-center" >Rejoins une FIJ</h2>
-                      <p className="text-center">Rejoins la FIJ la plus proche de chez toi</p>
-                    </div>
+          <div className="min-h-screen">
+              <header className="fixed top-0 right-0 left-0 z-50">
+                  <Nav />
+              </header>
+              <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
+                  <div className="absolute banner-fij inset-0 bg-cover bg-center">
+                      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
                   </div>
-                    <Fijgird />
-                </section>
-                <section className="py-12 bg-white">
-                  <Contact />
-                </section>
-            </div>
+                  <Banner />
+              </section>
+              <section id="about" className="py-12 bg-white">
+                <Aboutfij />
+              </section>
+              {/* Les familles d'impact */}
+              <section className="py-12 px-4">
+                <div className="flex items-center justify-center">
+                  <div>
+                    <h2 className="text-6xl  mb-4 text-center" >Rejoins une FIJ</h2>
+                    <p className="text-center">Rejoins la FIJ la plus proche de chez toi</p>
+                  </div>
+                </div>
+                  <Fijgird />
+              </section>
+              <section className="py-12 bg-white">
+                <Contact />
+              </section>
+          </div>
         </section>
     )
 }
