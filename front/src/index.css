@@ -17,3 +17,33 @@
     75%  { background: url(./assets/FB_IMG_1757701105299.jpg) center/cover; }
     100% { background: url(./assets/picture.jpeg) center/cover; }
 }
+
+.background-dark{
+    background-color: #101922;
+} 
+
+.banner-fij{
+    background: url(./assets/FB_IMG_1757701105299.jpg) center/cover ;
+}
+
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+.thecard {
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.thecard:hover {
+    transform: rotateY(180deg);
+}
+
+.thefront {
+    backface-visibility: hidden;
+}
+
+.theback {
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}

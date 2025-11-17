@@ -5,6 +5,7 @@ import Index from "./Index.jsx";
 import Login from "./Login.jsx";
 import Register from "./Register.jsx";
 import Fij from "./Fij.jsx";
+import Apropos from './Apropos.jsx';
 
 function App() {
   let Component;
@@ -21,6 +22,9 @@ function App() {
     case "/Fij":
       Component=Fij;
       break
+    case "/apropos":
+      Component= Apropos;
+      break;
     default:
       break;
   }
