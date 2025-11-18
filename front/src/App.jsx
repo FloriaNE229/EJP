@@ -6,6 +6,7 @@ import Login from "./Login.jsx";
 import Register from "./Register.jsx";
 import Fij from "./Fij.jsx";
 import Apropos from './Apropos.jsx';
+import Don from './Don.jsx';
 
 function App() {
   let Component;
@@ -24,6 +25,9 @@ function App() {
       break
     case "/apropos":
       Component= Apropos;
+      break;
+    case "/dons":
+        Component= Don;
       break;
     default:
       break;
