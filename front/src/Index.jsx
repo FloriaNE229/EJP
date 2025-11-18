@@ -26,7 +26,8 @@ const Nav = () => {
                         <li><a href="/evenements" className="nav-link">Événements</a></li>
                         <li><a href="#galerie" className="nav-link">Galerie</a></li>
                         <li><a href="#contact" className="nav-link">Contact</a></li>
-                        <li><a href="/Fij" className="nav-link">Je souhaite rejoindre une FIJ</a></li>
+                        <li><a href="/dons" className="nav-link">Faire un Don</a></li>
+                        <li><a href="/Fij" className="nav-link">Rejoindre une FIJ</a></li>
                     </ul>
 
             {isMenuOpen && (
