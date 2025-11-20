@@ -655,7 +655,7 @@ const Index = () =>{
                             {/* Image */}
                             <div className="flex-1 w-full max-w-2xl mb-8">
                             <img 
-                                src={unfrere} 
+                                src={unfrère} 
                                 alt="Les Eagles" 
                                 className="w-full h-full object-cover rounded-lg shadow-2xl"
                             />
