@@ -2,20 +2,31 @@ import { Nav } from "./Index";
 import { Contact } from "./Index";
 import React, { useState } from 'react';
 
-const Banner = ()=>{
-    return (
-        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto mt-6">
-            
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white mb-4 tracking-tighter">LES FAMILLES D'IMPACT JEUNES</h1>
-            <div className="border-t border-b border-white/30 py-3 mb-6">
-                <p className="text-lg md:text-xl text-white font-medium tracking-wide">DECOUVRE LES FAMILLES D'IMPACT JEUNES PRES DE CHEZ TOI</p>
-            </div>
-            <div className="flex flex-col gap-3 justify-center items-center mb-12">
-                <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-6 py-2 text-base font-medium transition-all duration-300 min-w-60"><a href="#">Demarer</a></button>
-            </div>
-        </div>
-    )
-}
+const Banner = () => {
+  return (
+    <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto animate-fade-in">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 tracking-tight leading-tight drop-shadow-2xl">
+        LES FAMILLES D'IMPACT JEUNES
+      </h1>
+      <div className="border-t-2 border-b-2 border-white/50 py-5 mb-10 backdrop-blur-sm bg-white/5 rounded-lg">
+        <p className="text-lg sm:text-xl md:text-2xl text-white font-bold tracking-wide drop-shadow-lg">
+          DÉCOUVRE LES FAMILLES D'IMPACT JEUNES PRÈS DE CHEZ TOI
+        </p>
+      </div>
+      <div className="flex justify-center items-center">
+        <a 
+          href="#fij-list" 
+          className="group bg-white/10 backdrop-blur-md border-2 border-white text-white hover:bg-white hover:text-black px-12 py-5 text-lg font-bold transition-all duration-300 rounded-xl shadow-2xl hover:shadow-white/30 hover:scale-105 flex items-center gap-3"
+        >
+          Démarrer
+          <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  );
+};
 
 const Aboutfij = ()=>{
     return (
@@ -201,7 +212,56 @@ const Fij = () =>{
                 </section>
             </div>
         </section>
-    )
-}
+
+        {/* Séparateur stylisé */}
+        <div className="w-full bg-white py-8">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center gap-4">
+              <div className="flex-1 h-px bg-linear-gradient-to-r from-transparent via-amber-600 to-transparent"></div>
+              <div className="w-3 h-3 bg-amber-600 rounded-full"></div>
+              <div className="flex-1 h-px bg-linear-gradient-to-r from-transparent via-amber-600 to-transparent"></div>
+            </div>
+          </div>
+        </div>
+
+        {/* Section Liste des FIJ */}
+        <section id="fij-list" className="py-24 bg-linear-gradient-to-b from-white via-amber-50/30 to-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-20">
+              <div className="inline-block mb-6">
+                <div className="w-16 h-1 bg-amber-600 mx-auto mb-4"></div>
+                <h2 className="text-5xl sm:text-6xl md:text-7xl font-black mb-6 text-gray-900 tracking-tight">
+                  Rejoins une FIJ
+                </h2>
+                <div className="w-16 h-1 bg-amber-600 mx-auto"></div>
+              </div>
+              <p className="text-2xl sm:text-3xl text-gray-800 max-w-4xl mx-auto font-light leading-relaxed">
+                Rejoins la FIJ la plus proche de chez toi et fais partie d'une communauté qui impacte
+              </p>
+            </div>
+            <Fijgird />
+          </div>
+        </section>
+
+        {/* Séparateur stylisé */}
+        <div className="w-full bg-white py-8">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center gap-4">
+              <div className="flex-1 h-px bg-linear-gradient-to-r from-transparent via-amber-600 to-transparent"></div>
+              <div className="w-3 h-3 bg-amber-600 rounded-full"></div>
+              <div className="flex-1 h-px bg-linear-gradient-to-r from-transparent via-amber-600 to-transparent"></div>
+            </div>
+          </div>
+        </div>
+
+        {/* Section Contact */}
+        <section className="py-24 bg-white">
+          <Contact />
+        </section>
+
+      </div>
+    </section>
+  );
+};
 
 export default Fij;
