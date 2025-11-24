@@ -100,6 +100,7 @@ const Aboutfij = ()=>{
     )
 }
 
+
 const Fijgird = () => {
     const fijData = [
         {nom:"Fij Djassin", description:"Create a welcoming atmosphere for every guest", mapURL:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.2374295874697!2d2.6072094!3d6.491592000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b50af82c2a631%3A0xbf1590d6b3c47000!2sBd%20Tokpota%2C%20Porto-Novo!5e0!3m2!1sen!2sbj!4v1763058642929!5m2!1sen!2sbj"},
@@ -176,6 +177,7 @@ const Fijgird = () => {
         </div>
     );
 };
+
 
 
 
