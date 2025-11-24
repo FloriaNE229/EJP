@@ -578,7 +578,7 @@ const Index = () =>{
                     {/* Buttons */}
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 px-4">
                         <button className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium text-base sm:text-lg shadow-lg hover:shadow-xl">
-                            Rejoindre une FIJ
+                            <a href="/Fij#fijgird">Rejoindre une FIJ</a>
                         </button>
                 
                         <button className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-white text-amber-600 rounded-full hover:bg-amber-50 transition-all duration-300 font-semibold text-base sm:text-lg shadow-lg hover:shadow-xl">
@@ -586,7 +586,7 @@ const Index = () =>{
                         </button>
                 
                         <button className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-amber-600 text-white rounded-full hover:bg-amber-600 transition-all duration-300 font-medium text-base sm:text-lg shadow-lg hover:shadow-xl">
-                            Carte des FIJ
+                            <a href="/Fij">Carte des FIJ</a>
                         </button>
                     </div>
                 </div>
