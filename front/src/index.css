@@ -23,31 +23,26 @@
 } 
 
 .banner-fij{
-    background: url(./assets/FB_IMG_1757701105299.jpg) center/cover ;
+    background: url(./assets/fij1.jpeg) center/cover, url(./assets/fij2.jpeg) center/cover, url(./assets/fij3.jpeg) center/cover, url(./assets/fij4.jpeg) center/cover, url(./assets/fij5.jpeg) center/cover, url(./assets/fij6.jpeg) center/cover ;
+}
+
+.banner-fij{
+    animation: slideShowFij 20s infinite;
+}
+
+@keyframes slideShowFij {
+    0%   { background: url(./assets/fij1.jpeg) center/cover; }
+    25%  { background: url(./assets/fij2.jpeg) center/cover; }
+    50%  { background: url(./assets/fij3.jpeg) center/cover; }
+    75%  { background: url(./assets/fij4.jpeg) center/cover; }
+    100% { background: url(./assets/fij5.jpeg) center/cover; }
 }
 
 .perspective-1000 {
     perspective: 1000px;
 }
 
-/* .thecard {
-    transform-style: preserve-3d;
-    transition: all 0.5s ease;
-}
 
-.thecard:hover {
-    transform: rotateY(180deg);
-}
-
-.thefront {
-    backface-visibility: hidden;
-}
-
-.theback {
-    backface-visibility: hidden;
-    transform: rotateY(180deg); 
-} 
-    */
 .perspective-1000 {
     perspective: 1000px;
 }

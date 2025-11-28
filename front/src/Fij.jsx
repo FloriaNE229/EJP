@@ -224,7 +224,7 @@ const Fij = () => {
                 {/* Hero Banner */}
                 <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
                     <div className="absolute banner-fij inset-0 bg-cover bg-center">
-                        <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+                        <div className="absolute inset-0 bg-black/70 "></div>
                     </div>
                     <Banner />
                 </section>
